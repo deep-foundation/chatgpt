@@ -4,22 +4,22 @@
 ![image](https://user-images.githubusercontent.com/58123600/228636978-0b838aef-43a8-47e1-af20-8ef08911f664.png)
 
 2.Wait for the Deep server to start in the terminal. Once it has started, you will see a message:
- ![image](https://user-images.githubusercontent.com/58123600/228638401-df7c85da-f5a0-4158-a050-4d6508d3daec.png)
+![image](https://user-images.githubusercontent.com/58123600/228638401-df7c85da-f5a0-4158-a050-4d6508d3daec.png)
  
 3. After the server starts, open the port tab and click on the link to open port 3007.
 ![image](https://user-images.githubusercontent.com/58123600/228638897-f6373709-ab72-4903-b624-95747d3bff22.png)
 
-4.In the new tab, click on the side of the menu to access additional options:
+4. In the new tab, click on the side of the menu to access additional options:
 ![image](https://user-images.githubusercontent.com/58123600/228639619-8c10d05f-6172-4d8d-a125-61604dbe996b.png)
 
 5. Copy the admin token ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2hhc3VyYS5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWFsbG93ZWQtcm9sZXMiOlsiYWRtaW4iXSwieC1oYXN1cmEtZGVmYXVsdC1yb2xlIjoiYWRtaW4iLCJ4LWhhc3VyYS11c2VyLWlkIjoiMzc2In0sImlhdCI6MTY3OTQxMjU4Mn0.QqCMnR2xUVNKGFwtB0P4piNYtNngvcdz83yYHEEt0mM") and click here:
 ![image](https://user-images.githubusercontent.com/58123600/228640137-5ca55725-1d3d-4a9a-9b0c-b67128936884.png)
 Click on the login button:
 ![image](https://user-images.githubusercontent.com/58123600/228640591-0cb61a5c-a19e-4172-91f7-b74851f05b05.png)
- After logging in, you will see a new interface:
+After logging in, you will see a new interface:
 ![image](https://user-images.githubusercontent.com/58123600/228640653-5f3cb522-2476-496f-9f18-f40a7abe09a2.png)
 
-6.Insert a query link by right-clicking and holding down the right mouse button.
+6. Insert a query link by right-clicking and holding down the right mouse button.
 ![image](https://user-images.githubusercontent.com/58123600/228641593-69766ea5-2f89-4e8f-9e3a-a628a9c766b2.png)
 ![image](https://user-images.githubusercontent.com/58123600/228641719-45fdb877-2430-4872-b431-fe4475834035.png)
 ![image](https://user-images.githubusercontent.com/58123600/228641728-9d1d948e-cdfc-46e1-80f7-f52e38bf3367.png)
@@ -58,7 +58,7 @@ ChatGPT package and it dependency Messaging are installed
     * Create a UsesOpenAiApiKey link to make OpenAiApiKey the current token from user to OpenAiApiKey:
     ![image](https://user-images.githubusercontent.com/58123600/228646016-9ac76d69-bf7b-471a-84b1-d59bb2771432.png)
     
-    *Create a Converstion link:
+    * Create a Converstion link:
     ![image](https://user-images.githubusercontent.com/58123600/228646100-8339f78b-d02f-455a-9e2a-c041b4f43e98.png)
 
     * Create a Message link and enter your question for ChatGPT. Save it by pressing Ctrl+S:
