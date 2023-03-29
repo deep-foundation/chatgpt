@@ -3,7 +3,7 @@
   "keywords": [
     "deep-package"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "@deep-foundation/core": "^0.0.2",
     "@flakeed/messaging": "^0.0.3"
