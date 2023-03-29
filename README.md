@@ -1,6 +1,6 @@
 # Steps for Starting to Use ChatGPT from Deep
 
-1. After copying the API key, go to https://github.com/deep-foundation/dev and run Gitpod.
+1. Go to https://github.com/deep-foundation/dev and run Gitpod.
 ![image](https://user-images.githubusercontent.com/58123600/228636978-0b838aef-43a8-47e1-af20-8ef08911f664.png)
 
 2.Wait for the Deep server to start in the terminal. Once it has started, you will see a message:
