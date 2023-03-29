@@ -3,7 +3,7 @@
 1. Go to https://github.com/deep-foundation/dev and run Gitpod.
 ![image](https://user-images.githubusercontent.com/58123600/228636978-0b838aef-43a8-47e1-af20-8ef08911f664.png)
 
-2.Wait for the Deep server to start in the terminal. Once it has started, you will see a message:
+2. Wait for the Deep server to start in the terminal. Once it has started, you will see a message:
 ![image](https://user-images.githubusercontent.com/58123600/228638401-df7c85da-f5a0-4158-a050-4d6508d3daec.png)
  
 3. After the server starts, open the port tab and click on the link to open port 3007.
@@ -46,29 +46,29 @@ ChatGPT package and it dependency Messaging are installed
 ![image](https://user-images.githubusercontent.com/58123600/228644352-4da12f75-1cf6-4c74-8726-26b06344bf99.png)
 
 12. Now you can create links to start a chat and chat with ChatGPT:
-    * First, you need to create an API key for the ChatGPT API by visiting this link: https://platform.openai.com/account/api-keys:
-    ![image](https://user-images.githubusercontent.com/58123600/228636188-df420f07-e112-4395-a260-bb8af2e238f6.png)
-    Then, copy the API key:
-    ![image](https://user-images.githubusercontent.com/58123600/228636391-f038806c-afd9-456b-904c-d8ad5822d3b0.png)
+* First, you need to create an API key for the ChatGPT API by visiting this link: https://platform.openai.com/account/api-keys:
+![image](https://user-images.githubusercontent.com/58123600/228636188-df420f07-e112-4395-a260-bb8af2e238f6.png)
+Then, copy the API key:
+![image](https://user-images.githubusercontent.com/58123600/228636391-f038806c-afd9-456b-904c-d8ad5822d3b0.png)
 
-    * Create an OpenAiApiKey link and paste the token from previous step into the editor. Save it by pressing Ctrl+S:
-    ![image](https://user-images.githubusercontent.com/58123600/228644980-d7019a20-ead0-4df8-8a41-433defd47606.png)    
-    ![image](https://user-images.githubusercontent.com/58123600/228645514-76c77927-3a36-48d4-84e2-68486246b199.png)
+* Create an OpenAiApiKey link and paste the token from previous step into the editor. Save it by pressing Ctrl+S:
+![image](https://user-images.githubusercontent.com/58123600/228644980-d7019a20-ead0-4df8-8a41-433defd47606.png)    
+![image](https://user-images.githubusercontent.com/58123600/228645514-76c77927-3a36-48d4-84e2-68486246b199.png)
     
-    * Create a UsesOpenAiApiKey link to make OpenAiApiKey the current token from user to OpenAiApiKey:
-    ![image](https://user-images.githubusercontent.com/58123600/228646016-9ac76d69-bf7b-471a-84b1-d59bb2771432.png)
+* Create a UsesOpenAiApiKey link to make OpenAiApiKey the current token from user to OpenAiApiKey:
+![image](https://user-images.githubusercontent.com/58123600/228646016-9ac76d69-bf7b-471a-84b1-d59bb2771432.png)
     
-    * Create a Converstion link:
-    ![image](https://user-images.githubusercontent.com/58123600/228646100-8339f78b-d02f-455a-9e2a-c041b4f43e98.png)
+* Create a Converstion link:
+![image](https://user-images.githubusercontent.com/58123600/228646100-8339f78b-d02f-455a-9e2a-c041b4f43e98.png)
 
-    * Create a Message link and enter your question for ChatGPT. Save it by pressing Ctrl+S:
-    ![image](https://user-images.githubusercontent.com/58123600/228646273-c15c36e7-b51d-4242-9e8d-0b8b16c50844.png)
-    ![image](https://user-images.githubusercontent.com/58123600/228646980-fbca8e1f-9feb-4875-822c-166daf8082b6.png)
+* Create a Message link and enter your question for ChatGPT. Save it by pressing Ctrl+S:
+![image](https://user-images.githubusercontent.com/58123600/228646273-c15c36e7-b51d-4242-9e8d-0b8b16c50844.png)
+![image](https://user-images.githubusercontent.com/58123600/228646980-fbca8e1f-9feb-4875-822c-166daf8082b6.png)
     
-    * Create a Reply link from the Message link to the Conversation link:
-    ![image](https://user-images.githubusercontent.com/58123600/228646880-b2ca0873-8177-4661-a22a-776dcdf1eb30.png)
-    ![image](https://user-images.githubusercontent.com/58123600/228647193-f6872bd5-5725-4849-ae1b-72175847c012.png)
-    ![image](https://user-images.githubusercontent.com/58123600/228650984-6fec466d-6b42-4d6f-9411-ee465952cfc0.png)
+* Create a Reply link from the Message link to the Conversation link:
+![image](https://user-images.githubusercontent.com/58123600/228646880-b2ca0873-8177-4661-a22a-776dcdf1eb30.png)
+![image](https://user-images.githubusercontent.com/58123600/228647193-f6872bd5-5725-4849-ae1b-72175847c012.png)
+![image](https://user-images.githubusercontent.com/58123600/228650984-6fec466d-6b42-4d6f-9411-ee465952cfc0.png)
     
 13. To continue chatting with ChatGPT, create a message with a question and then create a reply link from the user message to the ChatGPT message:
 ![image](https://user-images.githubusercontent.com/58123600/228651204-c9a3b1df-ae55-4e13-8ff0-883b2721a244.png)
