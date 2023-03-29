@@ -1,5 +1,11 @@
 {
+  "name": "@flakeed/chatgpt",
+  "keywords": [
+    "deep-package"
+  ],
+  "version": "0.0.2",
   "dependencies": {
-    "@flakeed/chatgpt": "^0.0.2"
+    "@deep-foundation/core": "^0.0.2",
+    "@flakeed/messaging": "^0.0.3"
   }
 }

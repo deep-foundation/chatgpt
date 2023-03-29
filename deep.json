@@ -1,0 +1,131 @@
+{
+  "package": {
+    "name": "@flakeed/chatgpt",
+    "version": "0.0.2"
+  },
+  "data": [
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "SyncTextFile"
+      },
+      "id": 1
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "Handler"
+      },
+      "id": 2
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "dockerSupportsJs"
+      },
+      "id": 3
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "HandleInsert"
+      },
+      "id": 4
+    },
+    {
+      "package": {
+        "dependencyId": 1,
+        "containValue": "Reply"
+      },
+      "id": 5
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "Type"
+      },
+      "id": 6
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "Value"
+      },
+      "id": 7
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "String"
+      },
+      "id": 8
+    },
+    {
+      "package": {
+        "dependencyId": 0,
+        "containValue": "User"
+      },
+      "id": 9
+    },
+    {
+      "id": "ReplyInsertHandlerCode",
+      "type": 1,
+      "value": {
+        "value": "async ({ data: { newLink: replyLinkId, triggeredByLinkId }, deep, require }) => {\n  const PACKAGE_NAME = `@flakeed/chatgpt`;\n  const { Configuration, OpenAIApi } = require(\"openai\");\n  const openAiApiKeyTypeLinkId = await deep.id(PACKAGE_NAME, \"OpenAiApiKey\");\n  const usesOpenAiApiKeyTypeLinkId = await deep.id(PACKAGE_NAME, \"UsesOpenAiApiKey\");\n  const messageTypeLinkId = await deep.id('@flakeed/messaging', \"Message\");\n  const replyTypeLinkId = await deep.id('@flakeed/messaging', \"Reply\");\n  const authorTypeLinkId = await deep.id('@flakeed/messaging', \"Author\");\n  const chatgptTypeLinkId = await deep.id(PACKAGE_NAME, \"ChatGPT\");\n  const containTypeLinkId = await deep.id('@deep-foundation/core', \"Contain\");\n\n  const { data: [messageLink = undefined] = [] } = await deep.select({\n    id: replyLinkId.from_id,\n    _not: {\n      in: {\n        from_id: chatgptTypeLinkId,\n        type_id: authorTypeLinkId\n      }\n    }\n  });\n  if (!messageLink) {\n    return 'No need to react to message of this reply.';\n  }\n  if (!messageLink.value?.value) {\n    throw new Error(`##${messageLink.id} must have a value`);\n  }\n  const message = messageLink.value.value;\n\n  const { data: [apiKeyLink] } = await deep.select({\n    type_id: openAiApiKeyTypeLinkId,\n    in: {\n      type_id: usesOpenAiApiKeyTypeLinkId,\n      from_id: triggeredByLinkId,\n    },\n  });\n  if (!apiKeyLink) {\n    throw new Error(`A link with type ##${openAiApiKeyTypeLinkId} is not found`);\n  }\n  if (!apiKeyLink.value?.value) {\n    throw new Error(`##${apiKeyLink.id} must have a value`);\n  }\n  const apiKey = apiKeyLink.value.value;\n  const configuration = new Configuration({\n    apiKey: apiKey,\n  });\n  const openai = new OpenAIApi(configuration);\n\n  const response = await openai.createChatCompletion({\n    model: \"gpt-3.5-turbo\",\n    messages: [{ role: \"user\", content: message }],\n  });\n\n  const { data: [{ id: chatgptMessageLinkId }] } = await deep.insert({\n    type_id: messageTypeLinkId,\n    string: { data: { value: response.data.choices[0].message.content } },\n    in:{\n        data: [\n          {\n          type_id: containTypeLinkId,\n          from_id: triggeredByLinkId,\n        },\n        {\n          type_id: authorTypeLinkId,\n          from_id: chatgptTypeLinkId,\n        },\n      ],\n    }\n  });\n\n  const { data: [{ id: replyToMessageLinkId }] } = await deep.insert({\n    type_id: replyTypeLinkId,\n    from_id: chatgptMessageLinkId,\n    to_id: replyLinkId.from_id,\n    in: {\n      data: {\n        type_id: containTypeLinkId,\n        from_id: triggeredByLinkId,\n      },\n    },\n  });\n\n  return response.data;\n};"
+      }
+    },
+    {
+      "id": "ReplyInsertHandler",
+      "type": 2,
+      "from": 3,
+      "to": "ReplyInsertHandlerCode"
+    },
+    {
+      "id": "HandleReplyInsert",
+      "type": 4,
+      "from": 5,
+      "to": "ReplyInsertHandler"
+    },
+    {
+      "id": "ChatGPT",
+      "type": 6
+    },
+    {
+      "id": "Conversation",
+      "type": 6
+    },
+    {
+      "id": "ConversationValue",
+      "type": 7,
+      "from": "Conversation",
+      "to": 8
+    },
+    {
+      "id": "OpenAiApiKey",
+      "type": 6
+    },
+    {
+      "id": "UsesOpenAiApiKey",
+      "type": 6,
+      "from": 9,
+      "to": "OpenAiApiKey"
+    },
+    {
+      "id": "OpenAiApiKeyValue",
+      "type": 7,
+      "from": "OpenAiApiKey",
+      "to": 8
+    }
+  ],
+  "errors": [],
+  "dependencies": [
+    {
+      "name": "@deep-foundation/core",
+      "version": "0.0.2"
+    },
+    {
+      "name": "@flakeed/messaging",
+      "version": "0.0.3"
+    }
+  ]
+}
