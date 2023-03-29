@@ -1,6 +1,6 @@
 # Steps for Starting to Use ChatGPT from Deep
 
-The chatgpt package for Deep enables easy integration of the ChatGPT language model into Deep applications, bringing AI-powered natural language processing capabilities to your projects. It simplifies interaction and response handling for enhanced conversational experiences. This package requires manual installation to set up AI-based conversational features in your Deep instance.
+The ChatGPT package for Deep allows seamless ChatGPT integration in your projects, providing AI-powered conversations.
 
 Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 
