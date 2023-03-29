@@ -1,0 +1,36 @@
+# Gitpod-related files
+.gitpod.yml
+.gitpod.Dockerfile
+
+# Development related files
+node_modules/
+*.log
+
+# Configuration files
+.editorconfig
+.eslintrc
+.prettierrc
+
+# Git related files
+.git/
+.gitignore
+
+# Continuous integration / Continuous deployment
+.travis.yml
+.circleci/
+.github/
+
+# Test related files
+__tests__/
+*.test.js
+*.spec.js
+
+# Build artifacts
+dist/
+build/
+
+# Miscellaneous
+.DS_Store
+*.bak
+*.swp
+*.tmp
