@@ -14,9 +14,9 @@
 
 5. Copy the admin token ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2hhc3VyYS5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWFsbG93ZWQtcm9sZXMiOlsiYWRtaW4iXSwieC1oYXN1cmEtZGVmYXVsdC1yb2xlIjoiYWRtaW4iLCJ4LWhhc3VyYS11c2VyLWlkIjoiMzc2In0sImlhdCI6MTY3OTQxMjU4Mn0.QqCMnR2xUVNKGFwtB0P4piNYtNngvcdz83yYHEEt0mM") and click here:
 ![image](https://user-images.githubusercontent.com/58123600/228640137-5ca55725-1d3d-4a9a-9b0c-b67128936884.png)
-Click on the login button:
+* Click on the login button:
 ![image](https://user-images.githubusercontent.com/58123600/228640591-0cb61a5c-a19e-4172-91f7-b74851f05b05.png)
-After logging in, you will see a new interface:
+* After logging in, you will see a new interface:
 ![image](https://user-images.githubusercontent.com/58123600/228640653-5f3cb522-2476-496f-9f18-f40a7abe09a2.png)
 
 6. Insert a query link by right-clicking and holding down the right mouse button.
@@ -26,7 +26,7 @@ After logging in, you will see a new interface:
 
 7. Open the editor by right-clicking and holding down the right mouse button on the query link:
 ![image](https://user-images.githubusercontent.com/58123600/228642069-46c84818-0600-4496-93b3-fa78f3081b2b.png)
-Insert this code: {id:{_gt:922}} and press Ctrl+S to save:
+* Insert this code: {id:{_gt:922}} and press Ctrl+S to save:
 ![image](https://user-images.githubusercontent.com/58123600/228642257-551f0a16-ce4d-4fd3-ab4c-3c4d65b251cb.png)
 
 8. Click on the query link, and then click on the next button:
@@ -38,7 +38,7 @@ Insert this code: {id:{_gt:922}} and press Ctrl+S to save:
 
 10. Click on "promises" to see results of async reactions
 ![image](https://user-images.githubusercontent.com/58123600/228643307-0a404425-5087-467d-80f1-948b2c75cb7c.png)
-ChatGPT package and it dependency Messaging are installed
+* ChatGPT package and it dependency Messaging are installed
 ![image](https://user-images.githubusercontent.com/58123600/228643606-082c546d-39ca-4c08-aa36-357e9018d6f5.png)
 
 11. Insert the "Join" link from the chatgpt package to the user:
