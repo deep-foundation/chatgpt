@@ -1,6 +1,6 @@
 # Steps for Starting to Use ChatGPT from Deep
 
-First, you need to create an API key for the ChatGPT API by visiting this link: https://platform.openai.com/account/api-keys:
+1. First, you need to create an API key for the ChatGPT API by visiting this link: https://platform.openai.com/account/api-keys:
 ![image](https://user-images.githubusercontent.com/58123600/228636188-df420f07-e112-4395-a260-bb8af2e238f6.png)
 Then, copy the API key:
 ![image](https://user-images.githubusercontent.com/58123600/228636391-f038806c-afd9-456b-904c-d8ad5822d3b0.png)
