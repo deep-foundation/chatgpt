@@ -1,4 +1,5 @@
 # Steps for Starting to Use ChatGPT from Deep
+https://www.youtube.com/watch?v=ieO2shJyrB8
 
 1. Go to https://github.com/deep-foundation/dev and run Gitpod.
 ![image](https://user-images.githubusercontent.com/58123600/228636978-0b838aef-43a8-47e1-af20-8ef08911f664.png)
