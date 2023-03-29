@@ -36,8 +36,9 @@ Insert this code: {id:{_gt:922}} and press Ctrl+S to save:
 ![image](https://user-images.githubusercontent.com/58123600/228643018-52128c0a-c850-4bea-9ae5-0ca4a59d93be.png)
 ![image](https://user-images.githubusercontent.com/58123600/228643113-e6a8f64b-bbd9-4409-a6eb-5b3655b6bcd3.png)
 
-10. Click on "promises" to view all available links:
+10. Click on "promises" to see results of async reactions
 ![image](https://user-images.githubusercontent.com/58123600/228643307-0a404425-5087-467d-80f1-948b2c75cb7c.png)
+ChatGPT package and it dependency Messaging are installed
 ![image](https://user-images.githubusercontent.com/58123600/228643606-082c546d-39ca-4c08-aa36-357e9018d6f5.png)
 
 11. Insert the "Join" link from the chatgpt package to the user:
