@@ -16,7 +16,12 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 4. In the new tab, click on the side of the menu to access additional options:
 ![image](https://user-images.githubusercontent.com/58123600/228639619-8c10d05f-6172-4d8d-a125-61604dbe996b.png)
 
-5. Copy the admin token to enter deep as admin for the next two steps: ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2hhc3VyYS5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWFsbG93ZWQtcm9sZXMiOlsiYWRtaW4iXSwieC1oYXN1cmEtZGVmYXVsdC1yb2xlIjoiYWRtaW4iLCJ4LWhhc3VyYS11c2VyLWlkIjoiMzc2In0sImlhdCI6MTY3OTQxMjU4Mn0.QqCMnR2xUVNKGFwtB0P4piNYtNngvcdz83yYHEEt0mM") and click here:
+5. Open console in browser and paste following command:
+const adminId = await deep.id('deep', 'admin');
+await deep.login({
+  linkId: adminId,
+});
+And press enter.
 ![image](https://user-images.githubusercontent.com/58123600/228640137-5ca55725-1d3d-4a9a-9b0c-b67128936884.png)
 * Click on the login button:
 ![image](https://user-images.githubusercontent.com/58123600/228640591-0cb61a5c-a19e-4172-91f7-b74851f05b05.png)
