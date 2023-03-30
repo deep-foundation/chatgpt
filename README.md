@@ -16,14 +16,15 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 4. In the new tab, click on the side of the menu to access additional options:
 ![image](https://user-images.githubusercontent.com/58123600/228639619-8c10d05f-6172-4d8d-a125-61604dbe996b.png)
 
-5. Open console in browser and paste following command:
+5. Press f12 to open developer console:
+![image](https://user-images.githubusercontent.com/58123600/228978982-b89ab3f8-e22c-47b1-ba58-93b1ee694cab.png)
+* And paste following command here and press Enter:
 const adminId = await deep.id('deep', 'admin');
 await deep.login({
   linkId: adminId,
 });
-And press enter.
-//there will be screenshots
-* After logging in, you will see a new interface:
+![image](https://user-images.githubusercontent.com/58123600/228979141-e2742a5f-3cd0-4dfe-a094-29c3e9793349.png)
+* After clicking the menu on the side, you will see a new interface:
 ![image](https://user-images.githubusercontent.com/58123600/228640653-5f3cb522-2476-496f-9f18-f40a7abe09a2.png)
 
 6. Insert a query link by right-clicking and holding down the right mouse button.
