@@ -34,6 +34,3 @@ build/
 *.bak
 *.swp
 *.tmp
-
-# Exclude README.md from npm package
-README.md

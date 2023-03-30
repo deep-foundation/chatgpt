@@ -1,6 +1,6 @@
 # Steps for Starting to Use ChatGPT from Deep
 
-The ChatGPT package for Deep allows seamless ChatGPT integration in your projects, providing AI-powered conversations.
+The ChatGPT package for Deep.
 
 Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 
