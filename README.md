@@ -16,10 +16,10 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 4. In the new tab, press f12 to open developer console:
 ![image](https://user-images.githubusercontent.com/58123600/228978982-b89ab3f8-e22c-47b1-ba58-93b1ee694cab.png)
 * And paste following command here and press Enter:
-const adminId = await deep.id('deep', 'admin');
-await deep.login({
+ const adminId = await deep.id('deep', 'admin');
+ await deep.login({
   linkId: adminId,
-});
+ });
 ![image](https://user-images.githubusercontent.com/58123600/228979141-e2742a5f-3cd0-4dfe-a094-29c3e9793349.png)
 * After clicking the menu on the side, you will see a new interface:
 ![image](https://user-images.githubusercontent.com/58123600/228640653-5f3cb522-2476-496f-9f18-f40a7abe09a2.png)
