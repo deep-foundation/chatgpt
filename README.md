@@ -22,9 +22,7 @@ await deep.login({
   linkId: adminId,
 });
 And press enter.
-![image](https://user-images.githubusercontent.com/58123600/228640137-5ca55725-1d3d-4a9a-9b0c-b67128936884.png)
-* Click on the login button:
-![image](https://user-images.githubusercontent.com/58123600/228640591-0cb61a5c-a19e-4172-91f7-b74851f05b05.png)
+//there will be screenshots
 * After logging in, you will see a new interface:
 ![image](https://user-images.githubusercontent.com/58123600/228640653-5f3cb522-2476-496f-9f18-f40a7abe09a2.png)
 
