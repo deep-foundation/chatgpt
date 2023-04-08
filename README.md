@@ -78,23 +78,27 @@ Then, copy the API key:
 And select the model that is on the screen:
 ![image](https://user-images.githubusercontent.com/58123600/230728288-ae2e9cd7-1533-4812-8524-20e4a0733d30.png)
 Creating from the user to the model, or create another model and specify the desired model in the editor, after which you need to create a UsesModel link from the desired Conversation to the model:
-![image](https://user-images.githubusercontent.com/58123600/230726099-ea4c79cc-7179-47af-9d84-8b88e0a6faaa.png)
+![image](https://user-images.githubusercontent.com/58123600/230728427-43385679-9eb9-433e-97c0-360228205e15.png)
   
 * Create a Converstion link:
-![image](https://user-images.githubusercontent.com/58123600/228646100-8339f78b-d02f-455a-9e2a-c041b4f43e98.png)
+![image](https://user-images.githubusercontent.com/58123600/230728467-572ffd1f-d623-4970-b43a-add47f1e6f13.png)
 
 * Create a Message link and enter your question for ChatGPT. Save it by pressing Ctrl+S:
-![image](https://user-images.githubusercontent.com/58123600/228646273-c15c36e7-b51d-4242-9e8d-0b8b16c50844.png)
-![image](https://user-images.githubusercontent.com/58123600/228646980-fbca8e1f-9feb-4875-822c-166daf8082b6.png)
+![image](https://user-images.githubusercontent.com/58123600/230728506-ba65ba31-b590-43ea-b7d9-9cdee1fa158d.png)
+![image](https://user-images.githubusercontent.com/58123600/230728539-e8d64daf-6cd9-4da1-be49-b5c7143a5444.png)
     
 * Create a Reply link from the Message link to the Conversation link:
-![image](https://user-images.githubusercontent.com/58123600/228646880-b2ca0873-8177-4661-a22a-776dcdf1eb30.png)
-![image](https://user-images.githubusercontent.com/58123600/228647193-f6872bd5-5725-4849-ae1b-72175847c012.png)
-![image](https://user-images.githubusercontent.com/58123600/228650984-6fec466d-6b42-4d6f-9411-ee465952cfc0.png)
+![image](https://user-images.githubusercontent.com/58123600/230728581-04fa2b59-7ae3-4cd7-80ad-ce5b408b9147.png)
+![image](https://user-images.githubusercontent.com/58123600/230728614-7049a7cd-ca6e-4d9c-9ce1-f7632514359a.png)
+After that you can see the response from ChatGPT
+![image](https://user-images.githubusercontent.com/58123600/230728690-24dab2cd-1c49-4d4d-ab56-8a31a5010071.png)
     
-14. To continue chatting with ChatGPT, create a message with a question and then create a reply link from the user message to the ChatGPT message:
-![image](https://user-images.githubusercontent.com/58123600/228651204-c9a3b1df-ae55-4e13-8ff0-883b2721a244.png)
-![image](https://user-images.githubusercontent.com/58123600/228651669-792f39d0-2327-4e9c-8188-c8eb11ba297e.png)
+14. To continue chatting with ChatGPT, create a Message link again and in its editor ask your question and press Ctrl+S, then create a Reply Link from the user's message you just created to the ChatGPT response from the previous request:
+![image](https://user-images.githubusercontent.com/58123600/230728943-a83cc6e9-6176-469b-ba2b-25577d99ba04.png)
+![image](https://user-images.githubusercontent.com/58123600/230728972-305bb848-3f16-4174-ade2-7594140699c6.png)
+
+After that we get another response from the bot:
+![image](https://user-images.githubusercontent.com/58123600/230729086-0e01b8c7-81f1-497e-8d76-1ddf47fe6073.png)
 
 That's all! You can now continue using ChatGPT by following step 14 as needed.
 
