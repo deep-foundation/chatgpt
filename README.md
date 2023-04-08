@@ -50,16 +50,16 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 10. After that we can install the package using install link from npm-packager, creating from user to our PackageQuery with package name
 ![image](https://user-images.githubusercontent.com/58123600/230725408-864162c0-533b-4c23-90af-ba0783a6a858.png)
 
-9. Click on "promises" to see results of async reactions
+11. Click on "promises" to see results of async reactions
 ![image](https://user-images.githubusercontent.com/58123600/230725530-cf5015d4-bce7-47ac-9b2c-b2554284474b.png)
 * ChatGPT package and it dependency Messaging are installed
 ![image](https://user-images.githubusercontent.com/58123600/230725546-64d5a1d9-c3ea-4eab-ae88-ecc7ca071e34.png)
 
-10. Insert the "Join" link from the chatgpt package to the user:
+12. Insert the "Join" link from the chatgpt package to the user:
 ![image](https://user-images.githubusercontent.com/58123600/228644111-ea9bb52d-bd82-4075-b788-aea1419e8050.png)
 ![image](https://user-images.githubusercontent.com/58123600/228644352-4da12f75-1cf6-4c74-8726-26b06344bf99.png)
 
-11. Now you can create links to start a chat and chat with ChatGPT:
+13. Now you can create links to start a chat and chat with ChatGPT:
 * First, you need to create an API key for the ChatGPT API by visiting this link: https://platform.openai.com/account/api-keys:
 ![image](https://user-images.githubusercontent.com/58123600/228636188-df420f07-e112-4395-a260-bb8af2e238f6.png)
 Then, copy the API key:
@@ -72,6 +72,13 @@ Then, copy the API key:
 * Create a UsesOpenAiApiKey link to make OpenAiApiKey the current token from user to OpenAiApiKey:
 ![image](https://user-images.githubusercontent.com/58123600/228646016-9ac76d69-bf7b-471a-84b1-d59bb2771432.png)
     
+* Using the UsesModel link:
+![image](https://user-images.githubusercontent.com/58123600/230726035-0b7836a7-4c4a-44f0-af19-596f08582389.png)
+And select the model that is on the screen:
+![image](https://user-images.githubusercontent.com/58123600/230726000-e9b04bb7-bd29-46fc-9c67-e8e63775158c.png)
+Creating from the user to the model, or create another model and specify the desired model in the editor, after which you need to create a UsesModel link from the desired Conversation to the model:
+![image](https://user-images.githubusercontent.com/58123600/230726099-ea4c79cc-7179-47af-9d84-8b88e0a6faaa.png)
+  
 * Create a Converstion link:
 ![image](https://user-images.githubusercontent.com/58123600/228646100-8339f78b-d02f-455a-9e2a-c041b4f43e98.png)
 
@@ -84,11 +91,11 @@ Then, copy the API key:
 ![image](https://user-images.githubusercontent.com/58123600/228647193-f6872bd5-5725-4849-ae1b-72175847c012.png)
 ![image](https://user-images.githubusercontent.com/58123600/228650984-6fec466d-6b42-4d6f-9411-ee465952cfc0.png)
     
-12. To continue chatting with ChatGPT, create a message with a question and then create a reply link from the user message to the ChatGPT message:
+14. To continue chatting with ChatGPT, create a message with a question and then create a reply link from the user message to the ChatGPT message:
 ![image](https://user-images.githubusercontent.com/58123600/228651204-c9a3b1df-ae55-4e13-8ff0-883b2721a244.png)
 ![image](https://user-images.githubusercontent.com/58123600/228651669-792f39d0-2327-4e9c-8188-c8eb11ba297e.png)
 
-That's all! You can now continue using ChatGPT by following step 12 as needed.
+That's all! You can now continue using ChatGPT by following step 14 as needed.
 
 
     
