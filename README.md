@@ -96,7 +96,6 @@ After that you can see the response from ChatGPT
 14. To continue chatting with ChatGPT, create a Message link again and in its editor ask your question and press Ctrl+S, then create a Reply Link from the user's message you just created to the ChatGPT response from the previous request:
 ![image](https://user-images.githubusercontent.com/58123600/230728943-a83cc6e9-6176-469b-ba2b-25577d99ba04.png)
 ![image](https://user-images.githubusercontent.com/58123600/230728972-305bb848-3f16-4174-ade2-7594140699c6.png)
-
 After that we get another response from the bot:
 ![image](https://user-images.githubusercontent.com/58123600/230729086-0e01b8c7-81f1-497e-8d76-1ddf47fe6073.png)
 
