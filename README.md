@@ -37,9 +37,18 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 7. Click on the query link, and then click on the next button:
 ![image](https://user-images.githubusercontent.com/58123600/228642826-15ce35ad-25b1-4a85-8671-46b277e93fd8.png)
 
-8. The next step is to open the packager and find the chatgpt package in the "not installed" section:
+<!-- 8. The next step is to open the packager and find the chatgpt package in the "not installed" section:
 ![image](https://user-images.githubusercontent.com/58123600/228643018-52128c0a-c850-4bea-9ae5-0ca4a59d93be.png)
-![image](https://user-images.githubusercontent.com/58123600/228643113-e6a8f64b-bbd9-4409-a6eb-5b3655b6bcd3.png)
+![image](https://user-images.githubusercontent.com/58123600/228643113-e6a8f64b-bbd9-4409-a6eb-5b3655b6bcd3.png) -->
+
+8. The next step would be to paste the link of the 'PackageQuery'
+![image](https://user-images.githubusercontent.com/58123600/230725197-addaf588-3345-46c8-b83c-cc5994b6b8b3.png)
+
+9. Then you need to go to its editor and write the name of the package to be installed, in our case it is: @flakeed/chatgpt and press Ctrs+S:
+![image](https://user-images.githubusercontent.com/58123600/230725273-f3999088-5310-4090-9421-edd7e1776680.png)
+
+10. After that we can install the package using install link from npm-packager, creating from user to our PackageQuery with package name
+![image](https://user-images.githubusercontent.com/58123600/230725408-864162c0-533b-4c23-90af-ba0783a6a858.png)
 
 9. Click on "promises" to see results of async reactions
 ![image](https://user-images.githubusercontent.com/58123600/228643307-0a404425-5087-467d-80f1-948b2c75cb7c.png)
