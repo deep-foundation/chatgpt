@@ -51,9 +51,9 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 ![image](https://user-images.githubusercontent.com/58123600/230725408-864162c0-533b-4c23-90af-ba0783a6a858.png)
 
 9. Click on "promises" to see results of async reactions
-![image](https://user-images.githubusercontent.com/58123600/228643307-0a404425-5087-467d-80f1-948b2c75cb7c.png)
+![image](https://user-images.githubusercontent.com/58123600/230725530-cf5015d4-bce7-47ac-9b2c-b2554284474b.png)
 * ChatGPT package and it dependency Messaging are installed
-![image](https://user-images.githubusercontent.com/58123600/228643606-082c546d-39ca-4c08-aa36-357e9018d6f5.png)
+![image](https://user-images.githubusercontent.com/58123600/230725546-64d5a1d9-c3ea-4eab-ae88-ecc7ca071e34.png)
 
 10. Insert the "Join" link from the chatgpt package to the user:
 ![image](https://user-images.githubusercontent.com/58123600/228644111-ea9bb52d-bd82-4075-b788-aea1419e8050.png)
