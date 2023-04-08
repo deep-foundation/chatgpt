@@ -31,7 +31,7 @@ Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
 
 6. Open the editor by right-clicking and holding down the right mouse button on the query link:
 ![image](https://user-images.githubusercontent.com/58123600/228642069-46c84818-0600-4496-93b3-fa78f3081b2b.png)
-* Insert this code: {id:{_gt:922}} and press Ctrl+S to save:
+* Insert this code: {id:{_gt:922}} and press Ctrl+S to save(if the id of your query connection is not 922, insert its current id instead of 922):
 ![image](https://user-images.githubusercontent.com/58123600/228642257-551f0a16-ce4d-4fd3-ab4c-3c4d65b251cb.png)
 
 7. Click on the query link, and then click on the next button:
