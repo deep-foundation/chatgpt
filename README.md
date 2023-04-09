@@ -69,11 +69,11 @@ Then, copy the API key:
 ![image](https://user-images.githubusercontent.com/58123600/230728071-03108fdc-2932-4c16-bb5a-bcee38431172.png)   
 ![image](https://user-images.githubusercontent.com/58123600/230728120-e46b18b8-25fe-42bd-baf0-c25a8d1a396d.png)
     
-* Create a UsesOpenAiApiKey link to make OpenAiApiKey the current token from user to OpenAiApiKey:
+* Create a UsesOpenAiApiKey link to make OpenAiApiKey the current token from user to OpenAiApiKey(if you have one link "OpenAiApiKey" then you can skip this step, it is used automatically):
 ![image](https://user-images.githubusercontent.com/58123600/230728181-a5614da1-e03c-4606-be06-9b9b64d6b122.png)
 ![image](https://user-images.githubusercontent.com/58123600/230728237-978ee823-7fb5-4f78-ad77-d84cbdf7b286.png)
     
-* Using the UsesModel link:
+* Using the UsesModel link(if you are satisfied with the default gpt-3.5-turbo model you can skip this step):
 ![image](https://user-images.githubusercontent.com/58123600/230728267-7d31b8e8-23f0-466a-8bd9-5460af962732.png)
 And select the model that is on the screen:
 ![image](https://user-images.githubusercontent.com/58123600/230728288-ae2e9cd7-1533-4812-8524-20e4a0733d30.png)
