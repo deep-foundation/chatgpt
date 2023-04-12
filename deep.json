@@ -1,131 +1,133 @@
 {
   "package": {
-    "name": "@flakeed/chatgpt",
-    "version": "0.0.11"
+    "name": "@deep-foundation/chatgpt",
+    "version": "1.0.3"
   },
   "data": [
     {
       "package": {
         "dependencyId": 0,
-        "containValue": "SyncTextFile"
+        "containValue": "Model"
       },
       "id": 1
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "Handler"
+        "dependencyId": 1,
+        "containValue": "Type"
       },
       "id": 2
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "dockerSupportsJs"
+        "dependencyId": 1,
+        "containValue": "Value"
       },
       "id": 3
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "HandleInsert"
+        "dependencyId": 1,
+        "containValue": "String"
       },
       "id": 4
     },
     {
       "package": {
         "dependencyId": 1,
-        "containValue": "Reply"
+        "containValue": "SyncTextFile"
       },
       "id": 5
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "Type"
+        "dependencyId": 1,
+        "containValue": "Handler"
       },
       "id": 6
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "Value"
+        "dependencyId": 1,
+        "containValue": "dockerSupportsJs"
       },
       "id": 7
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "String"
+        "dependencyId": 1,
+        "containValue": "HandleInsert"
       },
       "id": 8
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "User"
+        "dependencyId": 2,
+        "containValue": "Reply"
       },
       "id": 9
     },
     {
-      "id": "ReplyInsertHandlerCode",
+      "id": "GPT 3.5 Turbo",
       "type": 1,
       "value": {
-        "value": "async ({ data: { newLink: replyLinkId, triggeredByLinkId }, deep, require }) => {\n  const PACKAGE_NAME = `@flakeed/chatgpt`;\n  const { Configuration, OpenAIApi } = require(\"openai\");\n  const openAiApiKeyTypeLinkId = await deep.id(PACKAGE_NAME, \"OpenAiApiKey\");\n  const usesOpenAiApiKeyTypeLinkId = await deep.id(PACKAGE_NAME, \"UsesOpenAiApiKey\");\n  const messageTypeLinkId = await deep.id('@flakeed/messaging', \"Message\");\n  const replyTypeLinkId = await deep.id('@flakeed/messaging', \"Reply\");\n  const authorTypeLinkId = await deep.id('@flakeed/messaging', \"Author\");\n  const chatgptTypeLinkId = await deep.id(PACKAGE_NAME, \"ChatGPT\");\n  const containTypeLinkId = await deep.id('@deep-foundation/core', \"Contain\");\n\n  const { data: [messageLink = undefined] = [] } = await deep.select({\n    id: replyLinkId.from_id,\n    _not: {\n      in: {\n        from_id: chatgptTypeLinkId,\n        type_id: authorTypeLinkId\n      }\n    }\n  });\n  if (!messageLink) {\n    return 'No need to react to message of this reply.';\n  }\n  if (!messageLink.value?.value) {\n    throw new Error(`##${messageLink.id} must have a value`);\n  }\n  const message = messageLink.value.value;\n\n  const { data: [apiKeyLink] } = await deep.select({\n    type_id: openAiApiKeyTypeLinkId,\n    in: {\n      type_id: usesOpenAiApiKeyTypeLinkId,\n      from_id: triggeredByLinkId,\n    },\n  });\n  if (!apiKeyLink) {\n    throw new Error(`A link with type ##${openAiApiKeyTypeLinkId} is not found`);\n  }\n  if (!apiKeyLink.value?.value) {\n    throw new Error(`##${apiKeyLink.id} must have a value`);\n  }\n  const apiKey = apiKeyLink.value.value;\n  const configuration = new Configuration({\n    apiKey: apiKey,\n  });\n  const openai = new OpenAIApi(configuration);\n\n  const response = await openai.createChatCompletion({\n    model: \"gpt-3.5-turbo\",\n    messages: [{ role: \"user\", content: message }],\n  });\n\n  const { data: [{ id: chatgptMessageLinkId }] } = await deep.insert({\n    type_id: messageTypeLinkId,\n    string: { data: { value: response.data.choices[0].message.content } },\n    in:{\n        data: [\n          {\n          type_id: containTypeLinkId,\n          from_id: triggeredByLinkId,\n        },\n        {\n          type_id: authorTypeLinkId,\n          from_id: chatgptTypeLinkId,\n        },\n      ],\n    }\n  });\n\n  const { data: [{ id: replyToMessageLinkId }] } = await deep.insert({\n    type_id: replyTypeLinkId,\n    from_id: chatgptMessageLinkId,\n    to_id: replyLinkId.from_id,\n    in: {\n      data: {\n        type_id: containTypeLinkId,\n        from_id: triggeredByLinkId,\n      },\n    },\n  });\n\n  return response.data;\n};"
+        "value": "gpt-3.5-turbo"
+      }
+    },
+    {
+      "id": "GPT 3.5 TURBO 0301",
+      "type": 1,
+      "value": {
+        "value": "gpt-3.5-turbo-0301"
+      }
+    },
+    {
+      "id": "ChatGPT",
+      "type": 2
+    },
+    {
+      "id": "ConversationValue",
+      "type": 3,
+      "from": "Conversation",
+      "to": 4
+    },
+    {
+      "id": "Conversation",
+      "type": 2
+    },
+    {
+      "id": "ReplyInsertHandlerCode",
+      "type": 5,
+      "value": {
+        "value": "async ({ data: { newLink: replyLink, triggeredByLinkId }, deep, require }) => {\n\tconst PACKAGE_NAME = `@deep-foundation/chatgpt`;\n\tconst { Configuration, OpenAIApi } = require('openai');\n\tconst chatGPTTypeLinkId = await deep.id(PACKAGE_NAME, 'ChatGPT');\n\tconst conversationTypeLinkId = await deep.id(PACKAGE_NAME, 'Conversation');\n\tconst apiKeyTypeLinkId = await deep.id('@deep-foundation/openai', 'ApiKey');\n\tconst usesApiKeyTypeLinkId = await deep.id('@deep-foundation/openai', 'UsesApiKey');\n\tconst modelTypeLinkId = await deep.id('@deep-foundation/openai', 'Model');\n\tconst usesModelTypeLinkId = await deep.id('@deep-foundation/openai', 'UsesModel');\n\tconst messageTypeLinkId = await deep.id('@deep-foundation/messaging', 'Message');\n\tconst replyTypeLinkId = await deep.id('@deep-foundation/messaging', 'Reply');\n\tconst authorTypeLinkId = await deep.id('@deep-foundation/messaging', 'Author');\n\tconst containTypeLinkId = await deep.id('@deep-foundation/core', 'Contain');\n\tconst messagingTree = await deep.id('@deep-foundation/messaging', 'MessagingTree');\n\tconst reservedIds = await deep.reserve(1);\n\tconst chatGPTMessageLinkId = reservedIds.pop();\n\tlet model;\n\n\tconst { data: [messageLink] } = await deep.select({\n\t\tid: replyLink.from_id,\n\t\t_not: {\n\t\t\tout: {\n\t\t\t\tto_id: chatGPTTypeLinkId,\n\t\t\t\ttype_id: authorTypeLinkId,\n\t\t\t},\n\t\t},\n\t});\n\tif (!messageLink) {\n\t\treturn 'No need to react to message of this reply.';\n\t}\n\tif (!messageLink.value?.value) {\n\t\tthrow new Error(`##${messageLink.id} must have a value`);\n\t}\n\tconst message = messageLink.value.value;\n\n\tconst apiKeyLink = await getTokenLink();\n\tconst apiKey = apiKeyLink.value.value;\n\tconst configuration = new Configuration({\n\t\tapiKey: apiKey,\n\t});\n\tconst openai = new OpenAIApi(configuration);\n\n\tconst { data: conversationLink } = await deep.select({\n\t\tdown: {\n\t\t\ttree_id: { _eq: messagingTree },\n\t\t\tlink_id: { _eq: replyLink.id },\n\t\t},\n\t}, { returning: `id from_id type_id to_id value author: out (where: { type_id: { _eq: ${authorTypeLinkId}} }) { id from_id type_id to_id }` });\n\n\tif (!conversationLink) {\n\t\tthrow new Error('A conversationLink link is not found');\n\t}\n\tconst currentConversation = conversationLink.find(\n\t\t(link) => link.type_id === conversationTypeLinkId\n\t);\n\n\tconst {\n\t\tdata: [linkedModel],\n\t} = await deep.select({\n\t\ttype_id: modelTypeLinkId,\n\t\tin: {\n\t\t\ttype_id: usesModelTypeLinkId,\n\t\t\tfrom_id: currentConversation.id,\n\t\t},\n\t});\n\n\tconst {\n\t\tdata: [userLinkedModel],\n\t} = await deep.select({\n\t\ttype_id: modelTypeLinkId,\n\t\tin: {\n\t\t\ttype_id: usesModelTypeLinkId,\n\t\t\tfrom_id: triggeredByLinkId,\n\t\t},\n\t});\n\n\tif (!linkedModel && !userLinkedModel) {\n\t\tmodel = 'gpt-3.5-turbo';\n\t} else if (\n\t\t(linkedModel &&\n\t\t\tlinkedModel.value?.value &&\n\t\t\tuserLinkedModel &&\n\t\t\tuserLinkedModel.value?.value) ||\n\t\t(linkedModel && linkedModel.value?.value)\n\t) {\n\t\tmodel = linkedModel.value.value;\n\t} else {\n\t\tif (!userLinkedModel) {\n\t\t\tthrow new Error(`A link with type ##${userLinkedModel} is not found`);\n\t\t}\n\t\tif (!userLinkedModel.value?.value) {\n\t\t\tthrow new Error(`##${userLinkedModel.id} must have a value`);\n\t\t} else {\n\t\t\tmodel = userLinkedModel.value.value;\n\t\t}\n\t}\n\tconst messageLinks = conversationLink.filter((link) => link.type_id === messageTypeLinkId);\n\tconsole.log(\"messageLinks\", messageLinks)\n\tconst allMessages = await getMessages({ messageLinks: messageLinks });\n\tconsole.log(\"allMessages\", allMessages)\n\tconst response = await openai.createChatCompletion({\n\t\tmodel: model,\n\t\tmessages: [\n\t\t\t...allMessages,\n\t\t\t{\n\t\t\t\trole: 'user',\n\t\t\t\tcontent: message,\n\t\t\t},\n\t\t],\n\t});\n\n\tawait deep.serial({\n\t\toperations: [\n\t\t\t{\n\t\t\t\ttable: 'links',\n\t\t\t\ttype: 'insert',\n\t\t\t\tobjects: {\n\t\t\t\t\tid: chatGPTMessageLinkId,\n\t\t\t\t\ttype_id: messageTypeLinkId,\n\t\t\t\t\tin: {\n\t\t\t\t\t\tdata: [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\ttype_id: containTypeLinkId,\n\t\t\t\t\t\t\t\tfrom_id: triggeredByLinkId,\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t],\n\t\t\t\t\t},\n\t\t\t\t\tout: {\n\t\t\t\t\t\tdata: [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\ttype_id: authorTypeLinkId,\n\t\t\t\t\t\t\t\tto_id: chatGPTTypeLinkId,\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t],\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\t{\n\t\t\t\ttable: 'strings',\n\t\t\t\ttype: 'insert',\n\t\t\t\tobjects: {\n\t\t\t\t\tlink_id: chatGPTMessageLinkId,\n\t\t\t\t\tvalue: response.data.choices[0].message.content\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\ttable: 'links',\n\t\t\t\ttype: 'insert',\n\t\t\t\tobjects: {\n\t\t\t\t\ttype_id: replyTypeLinkId,\n\t\t\t\t\tfrom_id: chatGPTMessageLinkId,\n\t\t\t\t\tto_id: replyLink.from_id,\n\t\t\t\t\tin: {\n\t\t\t\t\t\tdata: {\n\t\t\t\t\t\t\ttype_id: containTypeLinkId,\n\t\t\t\t\t\t\tfrom_id: triggeredByLinkId,\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t],\n\t});\n\n\tasync function getMessages({ messageLinks }) {\n\t\treturn Promise.all(\n\t\t\tmessageLinks.map(async (link) => ({\n\t\t\t\trole: await getMessageRole({ messageLink: link }),\n\t\t\t\tcontent: link.value.value,\n\t\t\t}))\n\t\t);\n\t}\n\n\tasync function getTokenLink() {\n\t\tlet resultTokenLink;\n\t\tconst { data } = await deep.select({\n\t\t\t_or: [\n\t\t\t\t{\n\t\t\t\t\ttype_id: apiKeyTypeLinkId,\n\t\t\t\t\tin: {\n\t\t\t\t\t\ttype_id: containTypeLinkId,\n\t\t\t\t\t\tfrom_id: triggeredByLinkId,\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\tfrom_id: triggeredByLinkId,\n\t\t\t\t\ttype_id: usesApiKeyTypeLinkId,\n\t\t\t\t},\n\t\t\t],\n\t\t});\n\t\tif (data.length === 0) {\n\t\t\tthrow new Error(`Link of type ##${apiKeyTypeLinkId} is not found`);\n\t\t}\n\t\tconst usesLinks = data.filter(\n\t\t\t(link) => link.type_id === usesApiKeyTypeLinkId\n\t\t);\n\t\tif (usesLinks.length > 1) {\n\t\t\tthrow new Error(\n\t\t\t\t`More than 1 links of type ##${usesApiKeyTypeLinkId} are found`\n\t\t\t);\n\t\t}\n\t\tconst usesLink = data.find(\n\t\t\t(link) => link.type_id === usesApiKeyTypeLinkId\n\t\t);\n\t\tif (usesLink) {\n\t\t\tconst tokenLink = data.find((link) => link.id === usesLink.to_id);\n\t\t\tif (!tokenLink) {\n\t\t\t\tthrow new Error(`Link of type ##${apiKeyTypeLinkId} is not found`);\n\t\t\t} else {\n\t\t\t\tresultTokenLink = tokenLink;\n\t\t\t}\n\t\t} else {\n\t\t\tconst tokenLink = data.filter(\n\t\t\t\t(link) => link.type_id === apiKeyTypeLinkId\n\t\t\t);\n\t\t\tif (tokenLink.length > 1) {\n\t\t\t\tthrow new Error(\n\t\t\t\t\t`For 2 or more ##${apiKeyTypeLinkId} links you must activate it with usesOpenAiApiKey link`\n\t\t\t\t);\n\t\t\t} else {\n\t\t\t\tconst tokenLink = data.find(\n\t\t\t\t\t(link) => link.type_id === apiKeyTypeLinkId\n\t\t\t\t);\n\t\t\t\tif (!tokenLink) {\n\t\t\t\t\tthrow new Error(`Link of type ##${apiKeyTypeLinkId} is not found`);\n\t\t\t\t}\n\t\t\t\tresultTokenLink = tokenLink;\n\t\t\t}\n\t\t}\n\t\tif (!resultTokenLink.value?.value) {\n\t\t\tthrow new Error(`Link of type ##${apiKeyTypeLinkId} has no value`);\n\t\t}\n\t\treturn resultTokenLink;\n\t}\n\n\tasync function getMessageRole({ messageLink }) {\n\t\tconst authorLink = messageLinks.filter((link) => link.author && link.author.length > 0);\n\t\tif (!authorLink) {\n\t\t\tthrow new Error(`Author link not found for message ##${messageLinks.id}`);\n\t\t}\n\t\treturn authorLink.to_id === chatGPTTypeLinkId ? 'assistant' : 'user';\n\t}\n\n\treturn response.data;\n};"
       }
     },
     {
       "id": "ReplyInsertHandler",
-      "type": 2,
-      "from": 3,
+      "type": 6,
+      "from": 7,
       "to": "ReplyInsertHandlerCode"
     },
     {
       "id": "HandleReplyInsert",
-      "type": 4,
-      "from": 5,
-      "to": "ReplyInsertHandler"
-    },
-    {
-      "id": "ChatGPT",
-      "type": 6
-    },
-    {
-      "id": "Conversation",
-      "type": 6
-    },
-    {
-      "id": "ConversationValue",
-      "type": 7,
-      "from": "Conversation",
-      "to": 8
-    },
-    {
-      "id": "OpenAiApiKey",
-      "type": 6
-    },
-    {
-      "id": "UsesOpenAiApiKey",
-      "type": 6,
+      "type": 8,
       "from": 9,
-      "to": "OpenAiApiKey"
-    },
-    {
-      "id": "OpenAiApiKeyValue",
-      "type": 7,
-      "from": "OpenAiApiKey",
-      "to": 8
+      "to": "ReplyInsertHandler"
     }
   ],
   "errors": [],
   "dependencies": [
     {
+      "name": "@deep-foundation/openai",
+      "version": "1.0.1"
+    },
+    {
       "name": "@deep-foundation/core",
       "version": "0.0.2"
     },
     {
-      "name": "@flakeed/messaging",
-      "version": "0.0.3"
+      "name": "@deep-foundation/messaging",
+      "version": "1.0.1"
     }
   ]
 }
