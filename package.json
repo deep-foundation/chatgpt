@@ -5,6 +5,8 @@
   ],
   "version": "1.0.25",
   "scripts": {
+    "package:build": "npx tsc --project tsconfig.json",
+    "package:unbuild": "rm -f ./*.js; rm -f ./*.js.map; rm -f ./*.d.ts",
     "npm-pull": "npm-pull",
     "npm-release": "npm-release",
     "package:publish": "npm run package:build; npm publish --access public; npm run package:unbuild"
