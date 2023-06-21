@@ -1,6 +1,6 @@
-#chatgpt 
+# chatgpt
 
-The ChatGPT package for Deep allows seamless ChatGPT integration in your projects, providing AI-powered conversations.
+The ChatGPT package for Deep allows seamless GPT-3.5/GPT-4 integration in your projects, providing AI-powered conversations.
 
 [![npm](https://img.shields.io/npm/v/@deep-foundation/chatgpt.svg)](https://www.npmjs.com/package/@deep-foundation/chatgpt) 
 [![Gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/deep-foundation/dev) 
