@@ -34,3 +34,10 @@ build/
 *.bak
 *.swp
 *.tmp
+
+#from the test file
+
+*.d.ts
+*.js
+*.js.map
+*.tsx
