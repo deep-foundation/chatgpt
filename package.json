@@ -4,9 +4,17 @@
     "deep-package"
   ],
   "version": "1.0.6",
+  "scripts": {
+    "npm-pull": "npm-pull",
+    "npm-release": "npm-release",
+    "package:publish": "npm run package:build; npm publish --access public; npm run package:unbuild"
+  },
   "dependencies": {
     "@deep-foundation/core": "^0.0.2",
     "@deep-foundation/messaging": "~1.0.1",
     "@deep-foundation/openai": "~1.0.1"
+  },
+  "devDependencies": {
+    "@deep-foundation/npm-automation": "^1.0.2"
   }
 }
