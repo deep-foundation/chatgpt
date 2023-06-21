@@ -1,9 +1,12 @@
+#chatgpt 
+
+The ChatGPT package for Deep allows seamless ChatGPT integration in your projects, providing AI-powered conversations.
+
 [![npm](https://img.shields.io/npm/v/@deep-foundation/chatgpt.svg)](https://www.npmjs.com/package/@deep-foundation/chatgpt) 
 [![Gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/deep-foundation/dev) 
 [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=purple)](https://discord.gg/deep-foundation)
 
 # Steps for Starting to Use ChatGPT from Deep
-
 
 
 Video instruction: https://www.youtube.com/watch?v=63oAjA536AE
