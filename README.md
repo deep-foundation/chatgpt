@@ -1,8 +1,12 @@
+[![npm](https://img.shields.io/npm/v/@deep-foundation/chatgpt.svg)](https://www.npmjs.com/package/@deep-foundation/chatgpt) 
+[![Gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/deep-foundation/dev) 
+[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=purple)](https://discord.gg/deep-foundation)
+
 # Steps for Starting to Use ChatGPT from Deep
 
 
 
-Video instruction: https://www.youtube.com/watch?v=ieO2shJyrB8
+Video instruction: https://www.youtube.com/watch?v=63oAjA536AE
 
 1. Go to https://github.com/deep-foundation/dev and run Gitpod.
 ![image](https://user-images.githubusercontent.com/58123600/228636978-0b838aef-43a8-47e1-af20-8ef08911f664.png)
