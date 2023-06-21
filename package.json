@@ -3,7 +3,7 @@
   "keywords": [
     "deep-package"
   ],
-  "version": "1.0.25",
+  "version": "1.0.24",
   "scripts": {
     "package:build": "npx tsc --project tsconfig.json",
     "package:unbuild": "rm -f ./*.js; rm -f ./*.js.map; rm -f ./*.d.ts",
