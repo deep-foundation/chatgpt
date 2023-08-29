@@ -177,8 +177,8 @@
       "version": "0.0.1"
     },
     {
-      "name": "@deep-foundation/chatgpt-tokens-gpt-3-encoder",
-      "version": "0.0.19"
+      "name": "@deep-foundation/chatgpt-tokens-gpt-4-encoder",
+      "version": "0.0.2"
     },
     {
       "name": "@deep-foundation/openai",
