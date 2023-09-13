@@ -3,7 +3,7 @@
   "keywords": [
     "deep-package"
   ],
-  "version": "3.0.2",
+  "version": "3.0.3",
   "scripts": {
     "package:build": "npx tsc --project tsconfig.json",
     "package:unbuild": "rm -f ./*.js; rm -f ./*.js.map; rm -f ./*.d.ts",
@@ -12,10 +12,11 @@
     "package:publish": "npm run package:build; npm publish --access public; npm run package:unbuild"
   },
   "dependencies": {
-    "@deep-foundation/chatgpt-tokens-gpt-4-encoder": "^1.0.1",
+    "@deep-foundation/chatgpt-tokens-gpt-4-encoder": "~1.0.1",
     "@deep-foundation/core": "^0.0.2",
     "@deep-foundation/messaging": "~1.1.0",
     "@deep-foundation/openai": "~1.0.2",
+    "@deep-foundation/tokens": "^0.0.11",
     "@freephoenix888/dependency": "^0.0.1"
   },
   "devDependencies": {
