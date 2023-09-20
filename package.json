@@ -20,7 +20,7 @@
     "@freephoenix888/dependency": "^0.0.1"
   },
   "devDependencies": {
-    "@deep-foundation/npm-automation": "^1.0.2",
+    "@deep-foundation/npm-automation": "^18.1.10",
     "typescript": "^5.1.3"
   }
 }
