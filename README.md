@@ -11,7 +11,7 @@ The ChatGPT package for Deep allows seamless GPT-3.5/GPT-4 integration in your p
 
 Video instruction: https://www.youtube.com/watch?v=63oAjA536AE
 
-1. Go to https://github.com/deep-foundation/dev and run Gitpod.
+<!--1. Go to https://github.com/deep-foundation/dev and run Gitpod.
 ![image](https://user-images.githubusercontent.com/58123600/228636978-0b838aef-43a8-47e1-af20-8ef08911f664.png)
 
 2. Wait for the Deep server to start in the terminal. Once it has started, you will see a message:
@@ -43,9 +43,9 @@ Video instruction: https://www.youtube.com/watch?v=63oAjA536AE
 7. Click on the query link, and then click on the next button:
 ![image](https://user-images.githubusercontent.com/58123600/230727581-3663d465-6ec5-44bb-8de7-11935411d092.png)
 
-<!-- 8. The next step is to open the packager and find the chatgpt package in the "not installed" section:
+8. The next step is to open the packager and find the chatgpt package in the "not installed" section:
 ![image](https://user-images.githubusercontent.com/58123600/228643018-52128c0a-c850-4bea-9ae5-0ca4a59d93be.png)
-![image](https://user-images.githubusercontent.com/58123600/228643113-e6a8f64b-bbd9-4409-a6eb-5b3655b6bcd3.png) -->
+![image](https://user-images.githubusercontent.com/58123600/228643113-e6a8f64b-bbd9-4409-a6eb-5b3655b6bcd3.png)
 
 8. The next step would be to paste the link of the 'PackageQuery'
 ![image](https://user-images.githubusercontent.com/58123600/230727623-610fd438-bea8-4d2c-bb88-a1cfe34aec30.png)
@@ -106,7 +106,7 @@ After that you can see the response from ChatGPT
 After that we get another response from the bot:
 ![image](https://user-images.githubusercontent.com/58123600/230729086-0e01b8c7-81f1-497e-8d76-1ddf47fe6073.png)
 
-That's all! You can now continue using ChatGPT by following step 14 as needed.
+That's all! You can now continue using ChatGPT by following step 14 as needed.-->
 
 
     
