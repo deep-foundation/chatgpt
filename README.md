@@ -74,7 +74,7 @@ await deep.insert({
 
 ### 7. Using the ChatGPT Package
 - Exit from the package space.
-- Create a `Conversation` link.
+- Create a `Conversation` link specifically from the `@deep-foundation/chatgpt` package.
 - Create a `Message` link with your question.
 - Create a `Reply` link from your message to `Conversation` to send the request.
 
