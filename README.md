@@ -24,7 +24,7 @@ await deep.login({
 - Upon successful login, a new interface with links will appear.
 
 ### 3. Installing the ChatGPT Package
-- Open "Packager" in the DeepCase interface.
+- Open `Packager` in the DeepCase interface.
 - Locate and install the `@deep-foundation/chatgpt` package.
 
 ### 4. Granting Admin Rights to All Packages
@@ -41,13 +41,13 @@ await deep.insert([
 ```
 
 ### 5. Inserting the API Key
-- Create an ApiKey link.
+- Create an `ApiKey` link.
 - Open its editor, insert your API key, and save the changes (Ctrl+S).
 
 ### 6. Selecting the Model (if needed)
-**Note**: By default, the GPT-3.5 model is used. If this is suitable for your needs, you can skip this step.
-
-If you want to use another model, execute the following query, replacing `MODEL` with the ID of your model link:
+**Note**: By default, the GPT-3.5 `Model` is used. If this is suitable for your needs, you can skip this step.
+- To view the available prepared models, right-click on the package link -> space to enter the package space. Here, you can browse through and select the desired model.
+- If you want to use another `Model`, note down the ID of your chosen `Model` from the prepared ones. Then, execute the following query, replacing `MODEL` with the ID:
 ```javascript
 const MODEL = '1301'; // Your modelLinkID here
 
@@ -79,7 +79,7 @@ await deep.insert({
 - Create a `Reply` link from your message to `Conversation` to send the request.
 
 ### 8. Viewing the Answer and Continuing the Dialogue
-- To open all messages in the current chat, right-click on the message link from the current chat -> traveler -> down -> messagingTree.
+- To open all messages in the current chat, `Right-click on the Message link from the current Conversation -> traveler -> down -> messagingTree`.
 - To continue the dialogue, create a new message with your question and a `Reply` link from your message to the last response from ChatGPT.
 
 ### 9. Repeating the Process
