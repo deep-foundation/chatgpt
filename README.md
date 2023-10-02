@@ -1,6 +1,3 @@
-Absolutely! Below is the formatted content for the README.md file on GitHub. Markdown formatting is used to structure the content, making it visually appealing and easy to read.
-
-```markdown
 # ChatGPT
 
 The ChatGPT package for Deep allows seamless GPT-3.5/GPT-4 integration in your projects, providing AI-powered conversations.
@@ -87,4 +84,3 @@ await deep.insert({
 
 ### 9. Repeating the Process
 - Repeat these steps whenever you want to interact with ChatGPT or create a new dialogue.
-```
