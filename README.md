@@ -75,8 +75,8 @@ await deep.insert({
 ### 7. Using the ChatGPT Package
 - Exit from the package space.
 - Create a `Conversation` link specifically from the `@deep-foundation/chatgpt` package.
-- Create a `Message` link with your question.
-- Create a `Reply` link from your message to `Conversation` to send the request.
+- Create a `Message` link, open its editor, write your question as the value, and save the changes (Ctrl+S).
+- Create a `Reply` link from your `Message` to `Conversation` to send the request.
 
 ### 8. Viewing the Answer and Continuing the Dialogue
 - To open all messages in the current chat, `Right-click on the Message link from the current Conversation -> traveler -> down -> messagingTree`.
