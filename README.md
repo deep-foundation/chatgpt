@@ -63,11 +63,11 @@ await deep.insert({
 
 await deep.insert({
   type_id: await deep.id("@deep-foundation/openai", "UsesModel"),
-  from_id: 380, // Your adminLinkId here
+  from_id: await deep.id('deep', 'admin'),
   to_id: MODEL,
   in: {
     type_id: await deep.id("@deep-foundation/core", "Contain"),
-    from_id: 380, // Your adminLinkId here
+    from_id: await deep.id('deep', 'admin'),
   }
 });
 ```
